@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- 無効状態 -->
+  <item
+    android:state_enabled="false">
+    <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+      android:src="@drawable/ticket"
+      android:tint="@color/disabledText" />
+  </item>
+  <!-- 通常状態 -->
+  <item>
+    <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+      android:src="@drawable/ticket"
+      android:tint="@color/primaryText" />
+  </item>
+</selector>

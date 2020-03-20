@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="88dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center">
+            <Mvx.MvxImageView
+                android:id="@+id/Icon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                local:MvxBind="ImageUrl Image; DefaultImagePath 'res:user'"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="4dp"
+                android:background="@color/primary">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/small_ticket"
+                    android:layout_gravity="center_vertical" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    local:MvxBind="Text Tickets"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:padding="2dp" />
+                <ImageView
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/small_coupon"
+                    android:layout_gravity="center_vertical" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    local:MvxBind="Text Coupons"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:padding="2dp" />
+            </LinearLayout>
+        <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_gravity="bottom|left"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@color/primary" />-->
+            <ImageView
+                android:id="@+id/SmallIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:src="@drawable/begged"
+                local:MvxBind="Visibility Visibility(SmallIcon); DrawableName SmallIcon"
+                android:paddingTop="2dp"
+                android:gravity="center" />
+        </FrameLayout>
+        <TextView
+            android:id="@+id/Text"
+            android:layout_below="@+id/Icon"
+            android:text="1234567890"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:textColor="@color/secondaryText"
+            local:MvxBind="Text Text;" />
+    </LinearLayout>
+</RelativeLayout>

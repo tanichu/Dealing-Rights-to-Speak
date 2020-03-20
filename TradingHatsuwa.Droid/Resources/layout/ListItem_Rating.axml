@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+    <Mvx.MvxImageView
+        android:id="@+id/Icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        local:MvxBind="ImageUrl Image; DefaultImagePath 'res:user'"
+        android:scaleType="centerCrop" />
+    <LinearLayout
+        android:id="@+id/DetailText"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical|right">
+        <RatingBar
+            android:id="@+id/RatingBar"
+            local:MvxBind="Rating Rating;"
+            style="@style/MyRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="false"
+            android:rating="3"
+            android:numStars="5"
+            android:stepSize="1" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/Text"
+        android:layout_toRightOf="@+id/Icon"
+        android:layout_toLeftOf="@id/DetailText"
+        android:text="123456789012345678912345"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="0dp"
+        android:maxLines="2"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:textColor="@color/primaryText"
+        local:MvxBind="Text Text; Alpha Alpha" />
+</RelativeLayout>

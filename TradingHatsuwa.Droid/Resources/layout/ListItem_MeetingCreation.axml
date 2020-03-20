@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+    <ImageView
+        android:id="@+id/Icon"
+        android:layout_toRightOf="@+id/Button"
+        android:layout_width="24dp"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        local:MvxBind="Visibility Visibility(Image); DrawableName Image"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:id="@+id/Text"
+        android:layout_toRightOf="@+id/Icon"
+        android:text="1234567890"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="0dp"
+        android:maxLines="2"
+        android:scrollHorizontally="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:textColor="@color/primaryText"
+        local:MvxBind="Text Text; Alpha Alpha" />
+    <LinearLayout
+        android:id="@+id/DetailText"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@+id/Text"
+        android:paddingLeft="0dp"
+        android:paddingRight="16dp"
+        android:gravity="center_vertical|right">
+        <TextView
+            android:text="123456789012345678901234567890"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="2"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/secondaryText"
+            local:MvxBind="Text DetailText"
+            android:layout_weight="1" />
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_pencil_circle_black_24dp"
+            android:layout_marginLeft="16dp"
+            android:alpha="0.46" />
+    </LinearLayout>
+</RelativeLayout>

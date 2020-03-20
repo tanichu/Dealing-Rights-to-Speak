@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_width="196dp"
+    android:layout_height="196dp"
+    android:background="@drawable/roulette">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <Mvx.MvxImageView
+                android:id="@+id/Icon"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                local:MvxBind="ImageUrl Image; DefaultImagePath 'res:user'"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:id="@+id/Text"
+                android:layout_below="@+id/Icon"
+                android:text="1234567890"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingBottom="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:textColor="@color/secondaryText"
+                local:MvxBind="Text Text;" />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:src="@drawable/pop_kettei"
+            android:layout_marginTop="0dp"
+            local:MvxBind="Visibility Visibility(Selected)" />
+    </FrameLayout>
+</LinearLayout>
