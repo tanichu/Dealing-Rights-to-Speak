@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <item type="id" name="fab_translationY_from_AppBarBoundFabBehavior"/>
+  <item type="id" name="ScrollAwareFabBehavior_AddedOnOffsetChangedListener"/>
+</resources>
